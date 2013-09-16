@@ -1,4 +1,4 @@
-BASE_DIR ?= $(shell pwd)
+BASE_DIR := $(shell pwd)
 REBAR_REPO ?= https://github.com/rebar/rebar.git
 REBAR ?= $(BASE_DIR)/rebar
 DEPS ?= deps
