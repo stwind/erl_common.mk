@@ -8,10 +8,11 @@ Common Makefile rules for erlang project, including building, testing, and packa
 ```Makefile
 APP := my_erl_app
 
-include make/common.mk
-include make/rebar.mk
-include make/release.mk
-include make/pkg.mk
+include vars.mk
+include common.mk
+include rebar.mk
+include release.mk
+include pkg.mk
 ```
 
 ## Rules
