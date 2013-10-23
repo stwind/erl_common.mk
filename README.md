@@ -10,6 +10,7 @@ APP := my_erl_app
 
 include vars.mk
 include common.mk
+include dialyzer.mk
 include rebar.mk
 include release.mk
 include pkg.mk
