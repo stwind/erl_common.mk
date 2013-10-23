@@ -21,7 +21,7 @@ DIALYZER_APPS = asn1 \
 				tools
 
 ALL_DEPS = $(notdir $(wildcard deps/*))
-DEPS_LIST = $(filter-out $(DIALYZER_SKIP_DEPS), $(ALL_DEPS))
+DEPS_LIST = $(filter-out $(DIALYZER_SKIP_DEPS) rebar, $(ALL_DEPS))
 DIALYZER_DEPS = $(foreach dep,$(DEPS_LIST),deps/$(dep)/ebin)
 DEPS_PLT = deps.plt
 DIALYZER_OPTS ?= -Werror_handling -Wrace_conditions -Wunmatched_returns -Wunderspecs
