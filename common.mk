@@ -9,7 +9,7 @@ deps: $(REBAR)
 clean: $(REBAR)
 	@$(REBAR) clean
 
-test: $(REBAR)
+test: $(REBAR) deps
 	@$(REBAR) compile -D TEST
 	@$(REBAR) eunit skip_deps=true $(if $(SUITES),suites=$(SUITES),)
 
