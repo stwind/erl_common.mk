@@ -38,4 +38,7 @@ doc: $(REBAR) app
 lock-deps: $(REBAR) deps
 	@$(REBAR) lock-deps skip_deps=true ignore=meck,moka,proper,rebar skip_dirs=rel
 
+escript: app
+	@$(REBAR) escriptize skip_deps=true
+
 .PHONY: app doc deps clean test ct xref lock-deps build-plt
