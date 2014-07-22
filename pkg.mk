@@ -47,7 +47,7 @@ build_clean_dir = cd distdir/$(CLONEDIR) && \
                       cd ../..; done
 
 distdir/$(CLONEDIR)/$(MANIFEST_FILE): $(REBAR)
-	$(call get_dist_deps,$(if $(DEV),$(REBAR),$(REBAR) -C rebar.config.lock))
+	$(call get_dist_deps,$(REBAR))
 
 distdir/$(PKG_ID): distdir/$(CLONEDIR)/$(MANIFEST_FILE)
 	$(call build_clean_dir)
